@@ -1,0 +1,242 @@
+:root{
+  font-family: "Source Code Pro", monospace;
+  /* Colors */
+  --white: #f1f3f2;
+  --black: #111115;
+  --accent: #087e8b;
+  --hover: #075d72;
+  /* Timings */
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 16;
+}
+::selection{
+  background-color: var(--accent);
+  color: var(--white);
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--black);
+  overflow: hidden;
+}
+
+/* Preloader */
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+/* Preloader Logo */
+.logo{
+  width: 6vmin;
+  height: 6vmin;
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
+  /* Spin Animation */
+}
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
+
+/* Sidepanel */
+#sidepanel {
+  position: fixed;
+  background-color: var(--accent);
+  overflow: hidden;
+  height: 100vh;
+  width: 12vmin;
+  transition: width 300ms ease;
+}
+#sidepanel:hover{
+  width: 35vmin;
+}
+#sidepanel ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+#sidepanel ul li{
+  width: 100%;
+}
+#sidepanel ul li:last-child{
+  margin-top: auto;
+}
+#sidepanel ul li a {
+  display: flex;
+  align-items: center;
+  height: 12vmin;
+  color: var(--white);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 300ms ease;
+}
+#sidepanel ul li a:hover {
+  filter: grayscale(0) opacity(1);
+  background: var(--hover);
+}
+#sidepanel ul li a svg{
+  width: 4vmin;
+  height: inherit;
+  min-width: 4vmin;
+  margin: 0 3.6vmin;
+  transition: 0.3s ease-in-out;
+  fill: var(--white);
+}
+#sidepanel ul li a span{
+  display: none;
+  font-size: 2.5vmin;
+  margin-left: 2.5vmin;
+}
+#sidepanel:hover ul li a span{
+  display: block;
+}
+
+/* Main Content */
+#container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  align-content: center;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+}
+/* Main Text */
+h1 {
+  font-size: 10vmin;
+  position: relative;
+  width: max-content;
+  color: var(--white);
+}
+.name {
+  cursor: pointer;
+  color: var(--accent);
+  transition: 0.3s ease-in-out;
+}
+.name:hover {
+  color: var(--hover);
+  outline: 0.1vmin solid var(--white);
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1::before {
+  background: var(--black);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+h1::after {
+  width: 1vmin;
+  background: var(--white);
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 850ms steps(var(--typewriterCharacters)) infinite;
+}
+/* Subtext */
+.subtitle {
+  margin-top: 2.5vmin;
+  color: var(--white);
+  font-size: 2.8vmin;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+}
+/* Social Media Icons */
+.socials { 
+  opacity: 0;
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  margin-top: 2.5vmin;
+}
+.socials a{ 
+  text-decoration: none;
+  cursor: default;
+}
+.socials a svg {
+  height: 3.2vmin;
+  width: 3.2vmin;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  fill: var(--white);
+}
+.socials a svg:hover {
+  padding: 0 0.3vmin 0 0.3vmin;
+  height: 3.3vmin;
+  width: 3.3vmin;
+  fill: var(--accent);
+}
+
+/* Keyframes */
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1100px) {
+  h1 {
+    font-size: 7vmin;
+  }
+  .subtitle {
+    font-size: 3vmin;
+  }
+  #sidepanel{
+    bottom: 0;
+    width: 100vw;
+    height: 15vmin;
+  }
+  #sidepanel:hover{
+    width: 100vw;
+  }
+  #sidepanel ul{
+    flex-direction: row;
+  }
+  #sidepanel ul li a{
+    margin-left: 3vmin;
+  }
+  #sidepanel ul li a span{
+    display: block;
+    margin-left: 0.5vmin;
+  }
+  #sidepanel ul li:last-child{
+    display: none;
+  }
+}
