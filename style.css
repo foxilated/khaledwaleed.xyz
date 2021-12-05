@@ -1,4 +1,4 @@
-:root{
+:root {
   font-family: "Source Code Pro", monospace;
   /* Colors */
   --white: #f1f3f2;
@@ -9,11 +9,11 @@
   --typewriterSpeed: 2s;
   --typewriterCharacters: 16;
 }
-::selection{
+::selection {
   background-color: var(--accent);
   color: var(--white);
 }
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -34,25 +34,29 @@ body {
   z-index: 100;
 }
 /* Preloader Logo */
-.logo{
+.logo {
   width: 6vmin;
   height: 6vmin;
-  -webkit-animation:spin 1s linear infinite;
-  -moz-animation:spin 1s linear infinite;
-  animation:spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
   /* Spin Animation */
 }
-@-moz-keyframes spin { 
-  100% { -moz-transform: rotate(360deg); } 
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
 }
-@-webkit-keyframes spin { 
-  100% { -webkit-transform: rotate(360deg); } 
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
-@keyframes spin { 
-  100% { 
-      -webkit-transform: rotate(360deg); 
-      transform:rotate(360deg); 
-  } 
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 /* Sidepanel */
@@ -64,10 +68,10 @@ body {
   width: 12vmin;
   transition: width 300ms ease;
 }
-#sidepanel:hover{
+#sidepanel:hover {
   width: 35vmin;
 }
-#sidepanel ul{
+#sidepanel ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -76,10 +80,10 @@ body {
   align-items: center;
   height: 100%;
 }
-#sidepanel ul li{
+#sidepanel ul li {
   width: 100%;
 }
-#sidepanel ul li:last-child{
+#sidepanel ul li:last-child {
   margin-top: auto;
 }
 #sidepanel ul li a {
@@ -95,7 +99,7 @@ body {
   filter: grayscale(0) opacity(1);
   background: var(--hover);
 }
-#sidepanel ul li a svg{
+#sidepanel ul li a svg {
   width: 4vmin;
   height: inherit;
   min-width: 4vmin;
@@ -103,12 +107,12 @@ body {
   transition: 0.3s ease-in-out;
   fill: var(--white);
 }
-#sidepanel ul li a span{
+#sidepanel ul li a span {
   display: none;
   font-size: 2.5vmin;
   margin-left: 2.5vmin;
 }
-#sidepanel:hover ul li a span{
+#sidepanel:hover ul li a span {
   display: block;
 }
 
@@ -169,12 +173,12 @@ h1::after {
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
 }
 /* Social Media Icons */
-.socials { 
+.socials {
   opacity: 0;
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
   margin-top: 2.5vmin;
 }
-.socials a{ 
+.socials a {
   text-decoration: none;
   cursor: default;
 }
@@ -218,25 +222,25 @@ h1::after {
   .subtitle {
     font-size: 3vmin;
   }
-  #sidepanel{
+  #sidepanel {
     bottom: 0;
     width: 100vw;
     height: 15vmin;
   }
-  #sidepanel:hover{
+  #sidepanel:hover {
     width: 100vw;
   }
-  #sidepanel ul{
+  #sidepanel ul {
     flex-direction: row;
   }
-  #sidepanel ul li a{
+  #sidepanel ul li a {
     margin-left: 3vmin;
   }
-  #sidepanel ul li a span{
+  #sidepanel ul li a span {
     display: block;
     margin-left: 0.5vmin;
   }
-  #sidepanel ul li:last-child{
+  #sidepanel ul li:last-child {
     display: none;
   }
 }
