@@ -1,5 +1,5 @@
 :root {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   /* Colors */
   --white: #f1f3f2;
   --black: #111115;
@@ -9,10 +9,6 @@
   --typewriterSpeed: 2s;
   --typewriterCharacters: 16;
 }
-::selection {
-  background-color: var(--accent);
-  color: var(--white);
-}
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +16,10 @@
 body {
   background: var(--black);
   overflow: hidden;
+}
+::selection {
+  background-color: var(--accent);
+  color: var(--white);
 }
 
 /* Preloader */
@@ -73,8 +73,6 @@ body {
 }
 #sidepanel ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,9 +91,13 @@ body {
   color: var(--white);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: 300ms ease;
+  transition: 0.3s ease-in-out;
 }
 #sidepanel ul li a:hover {
+  filter: grayscale(0) opacity(1);
+  background: var(--hover);
+}
+#sidepanel ul li a:active {
   filter: grayscale(0) opacity(1);
   background: var(--hover);
 }
@@ -116,24 +118,7 @@ body {
   display: block;
 }
 
-/* Main Content */
-.about{
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  align-content: center;
-  text-align: left;
-  padding: 0 25% 0 30%;
-}
-.about h1{
-  color: var(--accent);
-  font-size: 7vmin;
-  padding-bottom: 2vmin;
-}
-.about p{
-  color: var(--white);
-  font-size: 3vmin;
-}
+/* Home */
 #container {
   min-height: 100vh;
   display: grid;
@@ -160,7 +145,7 @@ body {
 }
 #container h1::before,
 #container h1::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -212,7 +197,27 @@ body {
   width: 3.3vmin;
   fill: var(--accent);
 }
-
+/* About */
+.about {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  align-content: center;
+  text-align: left;
+  padding: 0 25% 0 30%;
+}
+.about .part {
+  margin-bottom: 10vmin;
+}
+.about h1 {
+  color: var(--accent);
+  font-size: 6vmin;
+  padding-bottom: 1.5vmin;
+}
+.about p {
+  color: var(--white);
+  font-size: 3vmin;
+}
 /* Keyframes */
 @keyframes typewriter {
   to {
