@@ -6,7 +6,7 @@
   --accent: #087e8b;
   --hover: #075d72;
   /* Timings */
-  --typewriterSpeed: 2s;
+  --typewriterSpeed: 1s;
   --typewriterCharacters: 16;
 }
 * {
