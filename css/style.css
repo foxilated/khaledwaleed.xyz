@@ -6,7 +6,7 @@
   --accent: #087e8b;
   --hover: #075d72;
   /* Timings */
-  --typewriterSpeed: 1s;
+  --typewriterSpeed: 2s;
   --typewriterCharacters: 16;
 }
 * {
@@ -137,11 +137,21 @@ body {
 .name {
   cursor: pointer;
   color: var(--accent);
-  transition: 0.3s ease-in-out;
+  transition: 0.1s ease-in-out;
+  /* This Disables Selecting */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .name:hover {
   color: var(--hover);
   outline: 0.1vmin solid var(--white);
+}
+.name:active {
+  font-size: 15vmin;
 }
 #container h1::before,
 #container h1::after {
