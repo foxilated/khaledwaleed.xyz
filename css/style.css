@@ -15,8 +15,30 @@
 }
 body {
   background: var(--black);
-  overflow: hidden;
 }
+a{
+  text-decoration: none;
+  color: var(--accent);
+}
+a:hover{
+  color: var(--hover);
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 1.5vmin;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover);
+}
+/* Text Selection */
 ::selection {
   background-color: var(--accent);
   color: var(--white);
@@ -218,6 +240,9 @@ body {
 }
 .about .part {
   margin-bottom: 10vmin;
+}
+.about .part:first-child {
+  margin-top: 20vmin;
 }
 .about h1 {
   color: var(--accent);
