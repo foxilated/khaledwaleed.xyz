@@ -16,11 +16,16 @@
 body {
   background: var(--black);
 }
-a{
+h1 {
+  font-size: 3vmin;
+  color: var(--white);
+}
+a {
   text-decoration: none;
   color: var(--accent);
+  transition: 300ms;
 }
-a:hover{
+a:hover {
   color: var(--hover);
 }
 /* Scrollbar */
@@ -45,18 +50,21 @@ a:hover{
 }
 
 /* Preloader */
-#preloader {
+#preloader,
+.error {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
   background: var(--black);
   height: 100vh;
   width: 100%;
-  position: fixed;
   z-index: 100;
 }
 /* Preloader Logo */
 .logo {
+  fill: var(--white);
   width: 6vmin;
   height: 6vmin;
   -webkit-animation: spin 1s linear infinite;
