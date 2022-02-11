@@ -299,7 +299,7 @@ a:hover {
     flex-direction: row;
   }
   #sidepanel ul li a {
-    margin-left: 10vmin;
+    margin-left: 3vmin;
   }
   #sidepanel ul li a span {
     display: block;
