@@ -6,7 +6,7 @@
   --accent: #087e8b;
   --hover: #075d72;
   /* Timings */
-  --typewriterSpeed: 2s;
+  --typewriterSpeed: 1s;
   --typewriterCharacters: 16;
 }
 * {
@@ -232,9 +232,6 @@ a:hover {
   fill: var(--white);
 }
 .socials a svg:hover {
-  padding: 0 0.3vmin 0 0.3vmin;
-  height: 3.3vmin;
-  width: 3.3vmin;
   fill: var(--accent);
 }
 /* About */
@@ -282,10 +279,14 @@ a:hover {
 /* Responsiveness */
 @media only screen and (max-width: 1100px) {
   h1 {
-    font-size: 7vmin;
+    font-size: 8vmin !important;
   }
   .subtitle {
-    font-size: 3vmin;
+    font-size: 3vmin !important;
+  }
+  .socials a svg{
+    height: 3.5vmin !important;
+    width: 3.5vmin !important;
   }
   #sidepanel {
     bottom: 0;
@@ -297,9 +298,8 @@ a:hover {
   }
   #sidepanel ul {
     flex-direction: row;
-  }
-  #sidepanel ul li a {
-    margin-left: 3vmin;
+    margin-right: 23vmin;
+    justify-content: center;
   }
   #sidepanel ul li a span {
     display: block;
