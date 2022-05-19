@@ -13,6 +13,13 @@
 * {
   padding: 0;
   margin: 0;
+  /* This Disables Selecting */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 body {
   background: var(--black);
@@ -126,39 +133,24 @@ a:hover {
   align-items: flex-end;
   width: 100%;
 }
-#sidepanel ul .linkone, .linktwo, .linkthree{
-  margin-right: -1.5vmin;
+#sidepanel ul .linkone,
+.linktwo,
+.linkthree {
+  margin-right: -3vmin;
 }
-#sidepanel ul .links:last-child {
-  margin-top: 0;
-}
-#sidepanel ul .links .linkone {
+#sidepanel ul .links .linkone,
+#sidepanel ul .links .linktwo,
+#sidepanel ul .links .linkthree,
+#sidepanel ul .links .linkfour {
   visibility: hidden;
   opacity: 0;
 
   transition: 300ms ease-in-out;
 }
-#sidepanel ul .links .linktwo {
-  visibility: hidden;
-  opacity: 0;
-
-  transition: 300ms ease-in-out;
-}
-#sidepanel ul .links .linkthree {
-  visibility: hidden;
-  opacity: 0;
-
-  transition: 300ms ease-in-out;
-}
-#sidepanel ul .links:hover .linkone {
-  visibility: visible;
-  opacity: 1;
-}
-#sidepanel ul .links:hover .linktwo {
-  visibility: visible;
-  opacity: 1;
-}
-#sidepanel ul .links:hover .linkthree {
+#sidepanel ul .links:hover .linkone,
+#sidepanel ul .links:hover .linktwo,
+#sidepanel ul .links:hover .linkthree,
+#sidepanel ul .links:hover .linkfour {
   visibility: visible;
   opacity: 1;
 }
@@ -204,13 +196,6 @@ a:hover {
 .name {
   color: var(--accent);
   font-weight: 500;
-  /* This Disables Selecting */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 /* Subtext */
 .subtitle {
@@ -221,26 +206,6 @@ a:hover {
   animation: fadeIn 3s ease forwards;
   letter-spacing: 0.03ch;
   margin: 1vmin 0 0 0.6vmin;
-}
-/* Social Media Icons */
-.socials {
-  opacity: 0;
-  /* animation: fadeIn 3s ease forwards; */
-  margin-top: 2.5vmin;
-}
-.socials a {
-  text-decoration: none;
-  cursor: default;
-}
-.socials a svg {
-  height: 3.2vmin;
-  width: 3.2vmin;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  fill: var(--white);
-}
-.socials a svg:hover {
-  fill: var(--accent);
 }
 /* About */
 .about {
@@ -267,16 +232,6 @@ a:hover {
   font-size: 3vmin;
 }
 /* Keyframes */
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-@keyframes blink {
-  to {
-    background: transparent;
-  }
-}
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -291,7 +246,7 @@ a:hover {
   .subtitle {
     font-size: 3vmin !important;
   }
-  .socials a svg{
+  .socials a svg {
     height: 3.5vmin !important;
     width: 3.5vmin !important;
   }
