@@ -207,6 +207,14 @@ a:hover {
   letter-spacing: 0.03ch;
   margin: 1vmin 0 0 0.6vmin;
 }
+.icons svg {
+  width: 4vmin;
+  height: inherit;
+  margin: 2vmin  1.5vmin 0 0 ;
+  transition: 0.3s ease-in-out;
+  fill: var(--white);
+  visibility: hidden;
+}
 /* About */
 .about {
   min-height: 100vh;
@@ -251,23 +259,9 @@ a:hover {
     width: 3.5vmin !important;
   }
   #sidepanel {
-    bottom: 0;
-    width: 100vw;
-    height: 15vmin;
+    visibility: hidden;
   }
-  #sidepanel:hover {
-    width: 100vw;
-  }
-  #sidepanel ul {
-    flex-direction: row;
-    margin-right: 23vmin;
-    justify-content: center;
-  }
-  #sidepanel ul li a span {
-    display: block;
-    margin-left: 0.5vmin;
-  }
-  #sidepanel ul li:last-child {
-    display: none;
+  .icons svg{
+    visibility:visible;
   }
 }
