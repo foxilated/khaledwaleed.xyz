@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: 'Roboto Slab', serif;
+
+  --background: #111115;
+  --onBackground: #fff;
+
+  --primary: #67c4f2;
+}
+
+body {
+  background: var(--background);
+  color: var(--onBackground);
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.icon:hover {
+  transform: translateY(-2px);
+  color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
