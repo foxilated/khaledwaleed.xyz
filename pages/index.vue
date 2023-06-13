@@ -40,13 +40,13 @@ const icons = ref([
     link: 'tel:+9647838577553'
   }
 ])
-
-const isHovering = ref(0)
 </script>
 <template>
   <main class="flex flex-col gap-4 justify-end h-screen p-6 pb-16 xl:pb-36 xl:p-36">
     <div class="flex flex-col gap-2">
-      <h1 class="text-4xl xl:text-5xl">Hey, I'm<span class="font-medium"> Khaled</span></h1>
+      <h1 class="text-4xl xl:text-5xl">
+        Hey, I'm<span class="font-medium text-primary"> Khaled</span>
+      </h1>
       <h2 class="text-lg lg:text-xl">
         I infuse websites with a living, dynamic presence<span class="blink">_</span>
       </h2>
