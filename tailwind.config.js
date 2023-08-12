@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      background: '#111115',
-      onBackground: '#ffffff',
+      background: '#22212C',
+      onBackground: '#F8F8F2',
 
-      primary: '#67c4f2'
+      primary: '#8AFF80'
     }
   },
   plugins: []
