@@ -5,10 +5,10 @@
 :root {
   font-family: 'Roboto Slab', serif;
 
-  --background: #111115;
-  --onBackground: #fff;
+  --background: #22212C;
+  --onBackground: #F8F8F2;
 
-  --primary: #67c4f2;
+  --primary: #8AFF80;
 }
 
 body {
