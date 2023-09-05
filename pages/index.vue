@@ -8,8 +8,6 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-const heading = ref<HTMLElement | null>(null)
-
 const icons = ref([
   {
     name: 'ph:github-logo',
@@ -33,7 +31,7 @@ const icons = ref([
   },
   {
     name: 'ph-envelope-simple',
-    link: 'mailto:khaledwaleed1337@gmail.com'
+    link: 'mailto:hi@khaledwaleed.xyz'
   },
   {
     name: 'ph-phone',
