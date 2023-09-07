@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'JetBrains Mono', monospace;
 
-  --background: #22212C;
-  --onBackground: #F8F8F2;
+  --background: #22212c;
+  --onBackground: #f8f8f2;
 
-  --primary: #8AFF80;
+  --cyan: #84fff3;
+  --green: #8aff80;
+  --yellow: #eded7a;
+  --pink: #ff80bf;
 }
 
 body {
@@ -30,7 +33,7 @@ body {
 }
 .icon:hover {
   transform: translateY(-2px);
-  color: var(--primary) !important;
+  color: var(--cyan) !important;
 }
 
 @media (max-width: 768px) {

@@ -8,7 +8,11 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-const icons = ref([
+interface Icon {
+  name: string
+  link: string
+}
+const icons = ref<Icon[]>([
   {
     name: 'ph:github-logo',
     link: 'https://github.com/foxilated/'
@@ -43,7 +47,7 @@ const icons = ref([
   <main class="flex flex-col gap-4 justify-end h-screen p-6 pb-16 xl:pb-36 xl:p-36">
     <div class="flex flex-col gap-2">
       <h1 class="text-4xl xl:text-5xl">
-        Hey, I'm<span class="font-medium text-primary"> Khaled</span>
+        Hey, I'm<span class="font-bold name"> Khaled</span>
       </h1>
       <h2 class="text-lg lg:text-xl">
         I infuse websites with a living, dynamic presence<span class="blink">_</span>
@@ -52,6 +56,7 @@ const icons = ref([
     <div class="self-start">
       <a
         v-for="icon in icons"
+        :key="icon.name"
         :href="icon.link"
         target="_blank">
         <Icon :name="icon.name" />
@@ -67,5 +72,18 @@ const icons = ref([
   50% {
     color: transparent;
   }
+}
+
+.name{
+    background: linear-gradient(90deg, var(--cyan) 0%,var(--green) 15%, var(--cyan) 30%, var(--green) 45%, var(--cyan) 60%, var(--green) 75%, var(--cyan) 90%, var(--green) 100%);
+  background-size: 1000% 100%;
+  animation: background 15s linear infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes background {
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
 }
 </style>
