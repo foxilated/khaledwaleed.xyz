@@ -50,12 +50,12 @@ const icons = ref<Icon[]>([
         Hey, I'm<span class="font-bold name"> Khaled</span>
       </h1>
       <h2 class="text-lg lg:text-xl">
-        I infuse websites with a living, dynamic presence<span class="blink">_</span>
+        I infuse software with a living, dynamic presence<span class="blink">_</span>
       </h2>
     </div>
     <div class="self-start">
       <a
-        v-for="icon in icons"
+        v-for="icon in icons"x
         :key="icon.name"
         :href="icon.link"
         target="_blank">
