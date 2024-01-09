@@ -1,89 +1,52 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Khaled Waleed',
-  ogTitle: 'Khaled Waleed',
-  description: `123`,
-  ogDescription: `123`,
-  ogImage: '/preview.jpg',
-  twitterCard: 'summary_large_image'
-})
-
-interface Icon {
-  name: string
-  link: string
-}
-const icons = ref<Icon[]>([
-  {
-    name: 'ph:github-logo',
-    link: 'https://github.com/foxilated/'
-  },
-  {
-    name: 'ph:linkedin-logo',
-    link: 'https://www.linkedin.com/in/foxilated/'
-  },
-  {
-    name: 'ph:instagram-logo',
-    link: 'https://www.instagram.com/khaled.jsx/'
-  },
-  {
-    name: 'ph-telegram-logo',
-    link: 'https://t.me/foxilated'
-  },
-  {
-    name: 'ph-whatsapp-logo',
-    link: 'https://wa.me/message/6N52L7STPCUJO1'
-  },
-  {
-    name: 'ph-envelope-simple',
-    link: 'mailto:hi@khaledwaleed.xyz'
-  },
-  {
-    name: 'ph-phone',
-    link: 'tel:+9647838577553'
-  }
-])
+const heading = 'Khaled Waleed'
 </script>
+
 <template>
-  <main class="flex flex-col gap-4 justify-end h-screen p-6 pb-16 xl:pb-36 xl:p-36">
-    <div class="flex flex-col gap-2">
-      <h1 class="text-4xl xl:text-5xl">
-        Hey, I'm<span class="font-bold name"> Khaled</span>
-      </h1>
-      <h2 class="text-lg lg:text-xl">
-        I infuse software with a living, dynamic presence<span class="blink">_</span>
-      </h2>
-    </div>
-    <div class="self-start">
-      <a
-        v-for="icon in icons"x
-        :key="icon.name"
-        :href="icon.link"
-        target="_blank">
-        <Icon :name="icon.name" />
-      </a>
+  <main
+    flex="~ gap4 lg:gap12 xxl:gap16 items-center col lg:row justify-center"
+    class="h-full"
+  >
+    <img
+      class="aspect-square w-full object-cover duration-300"
+      w="lg:50% xxl:120"
+      src="/images/khaled-waleed.jpg"
+      alt="Khaled Waleed Portrait"
+      border="2 transparent dark:primary-text-dark"
+    >
+    <div
+      flex="~ col gap8 lg:gap24"
+      w="lg:50% xxl:full"
+    >
+      <div flex="~ gap4 col">
+        <h1
+          class="font-bold duration-300"
+          mt="4 lg:0"
+          text="4xl lg:5xl"
+          v-text="heading"
+        />
+
+        <p
+          text="secondary-text dark:secondary-text-dark"
+          class="duration-300"
+        >
+          Lead Software Engineer at
+          <a
+            href="https://digital-logic.tech"
+            target="_blank"
+            class="text-secondary-text duration-300 dark:text-secondary-text-dark hover:text-primary hover:dark:text-primary-dark"
+          >Digital Logic</a>, Software Engineering Team Lead at
+
+          <a
+            href="https://vitex.dev"
+            target="_blank"
+            class="text-secondary-text duration-300 dark:text-secondary-text-dark hover:text-primary hover:dark:text-primary-dark"
+          >
+            vitex.
+          </a>
+        </p>
+      </div>
+      <Socials />
     </div>
   </main>
 </template>
-<style scoped>
-.blink {
-  animation: caret 1s steps(1) infinite;
-}
-@keyframes caret {
-  50% {
-    color: transparent;
-  }
-}
-
-.name{
-    background: linear-gradient(90deg, var(--cyan) 0%,var(--green) 15%, var(--cyan) 30%, var(--green) 45%, var(--cyan) 60%, var(--green) 75%, var(--cyan) 90%, var(--green) 100%);
-  background-size: 1000% 100%;
-  animation: background 15s linear infinite;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes background {
-  0%{background-position:0% 50%}
-  100%{background-position:100% 50%}
-}
-</style>

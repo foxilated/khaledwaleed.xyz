@@ -1,44 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Poppins', sans-serif;
 
-  --background: #22212c;
-  --onBackground: #f8f8f2;
-
-  --cyan: #84fff3;
-  --green: #8aff80;
-  --yellow: #eded7a;
-  --pink: #ff80bf;
+  --primary: #3D9BE3;
+  --primary-text: #ffffff;
+  --secondary-text: #BCC9D3;
+  --background: #111115;
 }
 
 body {
-  background: var(--background);
-  color: var(--onBackground);
-  height: 100vh;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
   overflow-x: hidden;
-  box-sizing: border-box;
-  font-weight: 300;
 }
 
-.icon {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-}
-.icon:hover {
-  transform: translateY(-2px);
-  color: var(--cyan) !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+
+  @apply text-primary-text dark:text-primary-text-dark
 }
 
-@media (max-width: 768px) {
-  .icon {
-    width: 1.4rem;
-    height: 1.4rem;
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+  width: 1vmin;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 1vmin;
+}
+
+
+@supports (scrollbar-color: var(--primary) var(--background)) {
+  * {
+      scrollbar-color: var(--primary) var(--background);
+      scrollbar-width: thin;
   }
+}
+
+::-moz-selection { 
+  color: var(--background);
+  background: var(--primary);
+}
+
+::selection {
+  color: var(--background);
+  background: var(--primary);
 }
