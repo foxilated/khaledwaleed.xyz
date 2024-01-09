@@ -4,6 +4,6 @@
     flex="~ items-center justify-center"
     bg="background dark:background-dark"
   >
-    <Logo class="w16 h16" />
+    <Logo class="h16 w16" />
   </div>
 </template>

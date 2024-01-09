@@ -4,6 +4,8 @@ const heading = 'Khaled Waleed'
 defineOgImage({
   component: 'OgImage',
 })
+
+const isFullScreen = ref(false)
 </script>
 
 <template>
@@ -12,11 +14,17 @@ defineOgImage({
     class="h-full w-full"
   >
     <img
-      class="aspect-square w-full object-cover duration-300"
-      w="lg:50% xxl:120"
+      class="aspect-square w-full object-cover"
+      bg="background dark:background-dark"
       src="/images/khaled-waleed.jpg"
       alt="Khaled Waleed Portrait"
+      w="lg:50% xxl:120"
+
+      :class="{
+        'h-screen xxl:w-full object-contain border-0! top-0 left-0 z55 fixed': isFullScreen,
+      }"
       border="2 transparent dark:primary-text-dark"
+      @click="isFullScreen = !isFullScreen"
     >
     <div
       flex="~ col gap12 lg:gap32"
