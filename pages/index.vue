@@ -21,7 +21,7 @@ const isFullScreen = ref(false)
       w="lg:50% xxl:120"
 
       :class="{
-        'h-screen xxl:w-full object-contain border-0! top-0 left-0 z55 fixed': isFullScreen,
+        'h-screen! xxl:w-full! object-contain! border-0! top-0! left-0! z55! fixed!': isFullScreen,
       }"
       border="2 transparent dark:primary-text-dark"
       @click="isFullScreen = !isFullScreen"
