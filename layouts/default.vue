@@ -2,7 +2,9 @@
 const isMounted = ref(false)
 
 onMounted(() => {
-  isMounted.value = true
+  setTimeout(() => {
+    isMounted.value = true
+  }, 1000)
 })
 
 const copyRight = 'CC BY-NC-SA 4.0 2019-PRESENT © Khaled Waleed'
@@ -11,6 +13,7 @@ const copyRight = 'CC BY-NC-SA 4.0 2019-PRESENT © Khaled Waleed'
 <template>
   <Loader v-if="!isMounted" />
   <main
+    v-else
     class="min-h-screen duration-300"
     bg="background dark:background-dark"
     px="6 lg:16 xxl:80"
