@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
+    'nuxt-og-image',
   ],
 
   experimental: {
@@ -50,6 +51,10 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       ],
     },
+  },
+
+  site: {
+    url: 'https://khaledwaleed.xyz',
   },
 
   devtools: {

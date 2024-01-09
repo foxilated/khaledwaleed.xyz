@@ -16,6 +16,9 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.9.1_eslint-ts-patch@8.55.0-1_typescript@5.3.3_vite@5.0.11_vue-tsc@1.8.27/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.0.6_nuxt@3.9.1_vite@5.0.11/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.0.6_nuxt@3.9.1_vite@5.0.11/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt-og-image@3.0.0-rc.25_@nuxt+devtools@1.0.6_@vue+compiler-core@3.4.6_nuxt@3.9.1_postcss@8._m44uz7b544a2g26itj577wxzlq/node_modules/nuxt-og-image/dist/runtime/nuxt/plugins/og-image-canonical-urls.server").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt-og-image@3.0.0-rc.25_@nuxt+devtools@1.0.6_@vue+compiler-core@3.4.6_nuxt@3.9.1_postcss@8._m44uz7b544a2g26itj577wxzlq/node_modules/nuxt-og-image/dist/runtime/nuxt/plugins/route-rule-og-image.server").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt-site-config@2.2.5_@nuxt+devtools@1.0.6_@vue+compiler-core@3.4.6_nuxt@3.9.1_postcss@8.4.3_vkg2nnum7mjtrzfwo5xslhvkti/node_modules/nuxt-site-config/dist/runtime/nuxt/plugins/0.siteConfig").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxtjs+color-mode@3.3.2/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.server").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxtjs+color-mode@3.3.2/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.client").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.9.1_eslint-ts-patch@8.55.0-1_typescript@5.3.3_vite@5.0.11_vue-tsc@1.8.27/node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
@@ -25,7 +28,7 @@ declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
 
   interface NuxtAppLiterals {
-    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'nuxt:revive-payload:server' | 'nuxt:global-components' | 'nuxt:prefetch' | 'nuxt:chunk-reload' | 'nuxt:checkIfLayoutUsed'
+    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'nuxt-site-config:init' | 'nuxt:revive-payload:server' | 'nuxt:global-components' | 'nuxt:prefetch' | 'nuxt:chunk-reload' | 'nuxt:checkIfLayoutUsed'
   }
 }
 

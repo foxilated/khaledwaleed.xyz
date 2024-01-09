@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const heading = 'Khaled Waleed'
+
+defineOgImage({
+  component: 'OgImage',
+})
 </script>
 
 <template>
